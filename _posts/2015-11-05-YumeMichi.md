@@ -3,7 +3,7 @@ layout: post
 title:  "YumeMichi's Introduction"
 author: YumeMichi
 date:   2015-11-05 22:26:45
-categories: team
+category: team
 tags: [team, author]
 comments: true
 ---
