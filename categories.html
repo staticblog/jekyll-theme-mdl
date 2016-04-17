@@ -1,0 +1,36 @@
+---
+layout: page
+permalink: /categories/
+title: 文章分类
+tags: [Categories]
+description: "An archive of posts sorted by categories."
+---
+<ul class="tag_box no-list-style">
+{% assign tags_list = site.categories %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+    <li><span class="mdl-badge" data-badge="{{ site.tags[tag].size }}"><a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" href="#{{ tag }}">{{ tag | capitalize }}</a></span></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+    <li><span class="mdl-badge" data-badge="{{ tag[1].size }}"><a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" href="#{{ tag[0] }}">{{ tag[0] | capitalize }}</a></span></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</ul>
+
+{% for tag in site.categories %}
+  <h5 id="{{ tag[0] }}" class="mdl-cell mdl-cell--12-col mdl-typography--headline">{{ tag[0] | capitalize }}</h2>
+  <ul class="no-list-style">
+    {% assign pages_list = tag[1] %}
+    {% for post in pages_list %}
+        {% if post.title != null %}
+        {% if group == null or group == post.group %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}/">{{ post.title }}</a></li>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </ul>
+{% endfor %}

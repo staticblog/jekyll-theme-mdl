@@ -1,0 +1,9 @@
+{% for nav in site.data.navs %}
+{% if nav.external %}
+<a class="mdl-navigation__link" href="{{ nav.url }}" target="_blank">{{ nav.title }}</a>
+{% elsif page.url == nav.url %}
+<a class="mdl-navigation__link is-active" href="{{ nav.url | prepend: site.baseurl }}" rel="bookmark">{{ nav.title }}</a>
+{% else %}
+<a class="mdl-navigation__link" href="{{ nav.url | prepend: site.baseurl }}" rel="bookmark">{{ nav.title }}</a>
+{% endif %}
+{% endfor %}

@@ -1,0 +1,27 @@
+<div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp" itemprop="mainContentOfPage">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{ post.title }}</h2>
+    </div>
+    <div class="mdl-card__media post-image">
+        <a href="{{ post.url | prepend: site.baseurl }}/">
+            {% if post.image != null %}
+            <img class="article-image" src="{{ post.image }}" border="0" alt="">
+            {% else %}
+            <img class="article-image" src="{{ '/assets/images/header-bg.jpg' | prepend: site.baseurl }}" border="0" alt="">
+            {% endif %}
+        </a>
+    </div>
+    <div class="mdl-card__supporting-text no-bottom-padding">
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+        <div id="tt2" class=" icon material-icons portfolio-share-btn">share</div>
+         <div class="mdl-tooltip" for="tt2">
+             Share via social media
+        </div>
+    </div>
+    <div class="mdl-card__supporting-text">
+        {{ post.excerpt | default: post.content }}
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ post.url | prepend: site.baseurl }}/" rel="nofollow">Read more</a>
+    </div>
+</div>

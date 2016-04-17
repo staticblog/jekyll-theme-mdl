@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp" itemprop="mainContentOfPage">
+    <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">{{ page.title }}</h2>
+    </div>
+    <div class="mdl-card__media post-image">
+        {% if page.image != null %}
+        <img class="article-image" src="{{ page.image }}" border="0" alt="">
+        {% else %}
+        <img class="article-image" src="{{ '/assets/images/header-bg.jpg' | prepend: site.baseurl }}" border="0" alt="">
+        {% endif %}
+    </div>
+
+    <div class="mdl-grid portfolio-copy">
+        <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+            {{ content }}
+        </div>
+    </div>
+</div>
