@@ -19,4 +19,9 @@ layout: default
             {{ content }}
         </div>
     </div>
+    {% unless site.data.social.disqus_shortname == null or page.comments == false %}
+    <div class="mdl-cell mdl-cell--12-col mdl-card__actions mdl-card--border">
+        <div id="disqus_thread"></div>
+    </div>
+    {% endunless %}
 </div>

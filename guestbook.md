@@ -3,7 +3,7 @@ layout: page
 permalink: /guestbook/
 title: guestbook
 tags: [guestbook]
-comments: true
+comments: 
 ---
 
 > fuck me, fuck my dog.
