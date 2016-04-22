@@ -12,10 +12,16 @@ title: Home
 <nav class="mdl-cell mdl-cell--12-col">
     <div class="mdl-card__actions">
         {% if paginator.next_page %}
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-prev" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Go to page {{ paginator.next_page }}"><i class="material-icons">arrow_back</i></a>
+        <a id="tt3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-prev" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="material-icons">arrow_back</i></a>
+        <div class="mdl-tooltip mdl-tooltip--top" for="tt3">
+            Go to page {{ paginator.next_page }}
+        </div>
         {% endif %}
         {% if paginator.previous_page %}
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-next" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Go to page {{ paginator.previous_page }}"><i class="material-icons">arrow_forward</i></a>
+        <a id="tt4" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-next" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="material-icons">arrow_forward</i></a>
+        <div class="mdl-tooltip mdl-tooltip--top" for="tt4">
+            Go to page {{ paginator.previous_page }}
+        </div>
         {% endif %}
     </div>
 </nav>

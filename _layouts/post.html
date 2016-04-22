@@ -36,10 +36,16 @@ layout: default
 <nav class="mdl-cell mdl-cell--12-col">
     <div class="mdl-card__actions">
         {% if page.previous %}
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-prev" href="{{ page.previous.url | prepend: site.baseurl }}/" title="{{ page.previous.title }}" rel="bookmark"><i class="material-icons">arrow_back</i></a>
+        <a id="tt5" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-prev" href="{{ page.previous.url | prepend: site.baseurl }}/" rel="bookmark"><i class="material-icons">arrow_back</i></a>
+        <div class="mdl-tooltip mdl-tooltip--top" for="tt5">
+            {{ page.previous.title }}
+        </div>
         {% endif %}
         {% if page.next %}
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-next" href="{{ page.next.url | prepend: site.baseurl }}/" title="{{ page.next.title }}"><i class="material-icons" rel="bookmark">arrow_forward</i></a>
+        <a id="tt6" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored nav-next" href="{{ page.next.url | prepend: site.baseurl }}/" rel="bookmark"><i class="material-icons">arrow_forward</i></a>
+        <div class="mdl-tooltip mdl-tooltip--top" for="tt6">
+            {{ page.next.title }}
+        </div>
         {% endif %}
     </div>
 </nav>
