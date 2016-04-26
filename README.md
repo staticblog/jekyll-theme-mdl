@@ -20,6 +20,20 @@ a simple jekyll theme ported from Google Material Design Lite
 
 4. categories and tags without plugins
 
+5. integrate with Swiftype
+
+6. u can feel free to turn off any page's comments cause default is on
+
+7. enhanced share experience with Twitter Cards and Open Graph
+
+8. google,bing,baidu webmaster verify support
+
+9. google,baidu analytics support
+
+10. MathJax support
+
+11. xsl styled sitemap and full-text rss support
+
 ### Todo
 
 - [ ] use semantic tags instead of too many `<div>`

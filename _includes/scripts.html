@@ -1,3 +1,3 @@
-{% unless site.data.social.disqus_shortname == null or page.comments == false %}{% include disqus_comments.html %}{% endunless %}
+{% unless site.data.social.disqus_shortname == null %}{% include disqus_comments.html %}{% endunless %}
 {% unless site.data.social.swiftype == null %}{% include swiftype.html %}{% endunless %}
 <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>

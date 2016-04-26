@@ -18,6 +18,7 @@
      post.puts "comments: "
      post.puts "image: "
      post.puts "mathjax: "
+     post.puts "swiftype: "
      post.puts "---"
    end
   end
@@ -40,6 +41,7 @@
      post.puts "tags: []"
      post.puts "comments: false"
      post.puts "image: "
+     post.puts "swiftype: "
      post.puts "---"
    end
   end

@@ -13,10 +13,9 @@
     </div>
     <div class="mdl-card__supporting-text no-bottom-padding">
         <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
-        <div id="tt2" class=" icon material-icons portfolio-share-btn">share</div>
-         <div class="mdl-tooltip" for="tt2">
-             Share via social media
-        </div>
+        {% unless post.comments == false %}
+        <a class="portfolio-share-btn" href="{{ post.url | prepend: site.baseurl }}/index.html#disqus_thread" data-disqus-identifier="{{ post.id }}" rel="nofollow"></a>
+        {% endunless %}
     </div>
     <div class="mdl-card__supporting-text">
         {{ post.excerpt | default: post.content }}
