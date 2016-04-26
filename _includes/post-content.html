@@ -1,0 +1,9 @@
+<div class="mdl-grid portfolio-copy">
+    {% if site.data.social.swiftype == null or page.swiftype == false %}
+    <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding " data-swiftype-index="false">
+    {% else %}
+    <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding " data-swiftype-index="true">
+    {% endif %}
+        {{ content }}
+    </div>
+</div>

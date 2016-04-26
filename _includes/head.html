@@ -9,6 +9,17 @@
     <meta name="author" content="{{ page.author | default: site.github.owner_name }}">
     <meta name="generator" content="Jekyll">
 
+    <!-- Swiftype meta tags -->
+    {% unless site.data.social.swiftype == null or page.swiftype == false %}
+    <meta property="st:title" content="{{ page.title | default: site.title }}">
+    <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.image != null %}
+    <meta name="st:image" content="{{ page.image }}">
+    {% else %}
+    <meta name="st:image" content="{{ '/assets/images/header-bg.jpg' | prepend: site.baseurl }}">
+    {% endif %}
+    {% endunless %}
+
     {% if site.data.social.twitter %}
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
