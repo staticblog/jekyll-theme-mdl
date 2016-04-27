@@ -12,7 +12,6 @@
     <!-- Swiftype meta tags -->
     {% unless site.data.social.swiftype == null or page.swiftype == false %}
     <meta property="st:title" content="{{ page.title | default: site.title }}">
-    <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
     {% if page.image != null %}
     <meta name="st:image" content="{{ page.image }}">
     {% else %}
