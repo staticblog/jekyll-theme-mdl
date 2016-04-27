@@ -1,0 +1,7 @@
+<div class="mdl-mini-footer__right-section">
+    <ul class="mdl-mini-footer__link-list">
+        {% for roll in site.data.rolls %}
+        <li><a href="{{ roll.url }}" rel="friend" target="_blank">{{ roll.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

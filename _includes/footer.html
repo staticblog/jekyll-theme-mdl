@@ -1,6 +1,6 @@
 <footer class="mdl-mini-footer" data-swiftype-index="false">
     <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">{{ site.subtitle }}</div>
+        <div class="mdl-logo">&copy; <time datetime="{{ site.time | date_to_xmlschema }}">2015-{{ site.time | date: '%Y' }}</time> {{ site.title }}</div>
     </div>
-    {% include social.html %}
+    {% include blogroll.html %}
 </footer>
